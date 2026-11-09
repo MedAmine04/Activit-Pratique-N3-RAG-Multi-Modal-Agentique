@@ -6,15 +6,14 @@ CLIP (texte + image, espace commun) → ChromaDB → `retriever_tool` → agent 
 ```
 PC : notebook RAG + ChromaDB + agent LangGraph ──HTTPS (2 tunnels)──► Colab : Ollama (Qwen, Qwen-VL) + serveur CLIP (FastAPI)
 ```
-Corpus de démonstration : *Attention Is All You Need*. Requêtes du technicien : texte, image, ou image + texte.
+**Donnée d'entrée : un seul PDF** (démonstration : *Attention Is All You Need*) ; texte et images sont tous extraits de ce PDF. Requêtes du technicien : texte, image, ou image + texte.
 
 ## Contenu
 | Chemin | Rôle |
 |---|---|
 | `notebooks/RAG_multimodal_agentique.ipynb` | **Le projet** : tout le code et les étapes 0 à 7 dans un seul notebook |
 | `colab/colab_llm_server.ipynb` | À lancer sur Colab : Ollama (Qwen2.5, Qwen2.5-VL) + serveur d'embeddings CLIP + 2 tunnels publics |
-| `data/pdfs/` | PDF source (`attention_is_all_you_need.pdf`) |
-| `data/photos/` | Photos d'équipements à indexer (optionnel) |
+| `data/pdfs/` | Le PDF source (`attention_is_all_you_need.pdf`) : seule donnée d'entrée |
 | `notebooks/reference_cours.ipynb` | Notebook du cours (référence) |
 | `.env.example` | Modèle du fichier `.env` (URL du serveur Colab) |
 

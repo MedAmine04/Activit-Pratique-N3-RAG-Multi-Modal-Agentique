@@ -1,3 +1,0 @@
-Dépose ici les photos d'équipements (jpg/png) puis lance l'indexation (cellule « photos » du notebook,
-ou `python scripts/build_index.py --photos data/photos`). La description de chaque photo est générée
-automatiquement par Qwen2.5-VL (serveur Colab) ; le chemin du fichier est enregistré dans la base.
